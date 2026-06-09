@@ -36,11 +36,15 @@ API доступно: http://127.0.0.1:8000/api/tasks
 
 ## Методы
 
-GET /api/tasks — список (пагинация, фильтры: discipline_id, teacher_id, sort_by, order)
-GET /api/tasks/{id} — одна задача
-POST /api/tasks — создание
-PUT /api/tasks/{id} — обновление
-DELETE /api/tasks/{id} — удаление
+GET /api/tasks - список (пагинация, фильтры: discipline_id, teacher_id, sort_by, order)
+
+GET /api/tasks/{id} - одна задача
+
+POST /api/tasks - создание
+
+PUT /api/tasks/{id} - обновление
+
+DELETE /api/tasks/{id} - удаление
 
 ## Роли
 
