@@ -23,12 +23,17 @@ php artisan key:generate
 В .env указать подключение к БД:
 
 DB_HOST=127.0.1.12
+
 DB_PORT=3306
+
 DB_DATABASE=task_manager
+
 DB_USERNAME=root
+
 DB_PASSWORD=
 
 php artisan migrate:fresh
+
 php artisan serve
 
 API доступно: http://127.0.0.1:8000/api/tasks
