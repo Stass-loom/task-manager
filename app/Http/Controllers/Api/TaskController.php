@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
-    // GET /api/tasks - список задач (с пагинацией, фильтрацией, сортировкой)
+    // GET /api/tasks - index (список с пагинацией, фильтрацией, сортировкой)
     public function index(Request $request)
     {
         $query = Task::with(['discipline', 'teacher']);
@@ -44,7 +44,7 @@ class TaskController extends Controller
         return response()->json($task);
     }
 
-    // POST /api/tasks - создать задачу
+    // POST /api/tasks - create (создание новой задачи)
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -60,7 +60,7 @@ class TaskController extends Controller
         return response()->json($task, 201);
     }
 
-    // PUT/PATCH /api/tasks/{id} - обновить задачу
+    // PUT /api/tasks/{id} - update (обновление задачи)
     public function update(Request $request, $id)
     {
         $task = Task::findOrFail($id);
@@ -78,7 +78,7 @@ class TaskController extends Controller
         return response()->json($task);
     }
 
-    // DELETE /api/tasks/{id} - удалить задачу
+    // DELETE /api/tasks/{id} - delete (удаление задачи)
     public function destroy($id)
     {
         $task = Task::findOrFail($id);
